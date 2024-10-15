@@ -7707,7 +7707,7 @@ a.anchor-link {
 
 10/10/2024  03:00 PM           195,764 mysqlsampledatabase.sql
                1 File(s)        195,764 bytes
-               0 Dir(s)  804,300,771,328 bytes free
+               0 Dir(s)  805,904,437,248 bytes free
 </pre>
 </div>
 </div>
@@ -8668,6 +8668,16 @@ a.anchor-link {
 <span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span>
 <span class="p">);</span>
 
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">before_company_t_update</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">Company_t</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="k">New</span><span class="p">.</span><span class="n">created_timestamp</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">created_timestamp</span><span class="w"> </span><span class="k">THEN</span>
+<span class="w">        </span><span class="n">SIGNAL</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="s1">'45000'</span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="k">MESSAGE_TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Error: Cannot change the value of the created_timestamp field'</span><span class="p">;</span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+
 <span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">Supplier_t</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ID</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span>
 <span class="w">    </span><span class="n">rating</span><span class="w"> </span><span class="n">TINYINT</span><span class="p">,</span>
@@ -8742,6 +8752,7 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre> * mysql+pymysql://root:***@localhost
 1 rows affected.
+0 rows affected.
 0 rows affected.
 0 rows affected.
 0 rows affected.
