@@ -37,7 +37,7 @@ __We adapt the syllabus based on progress during the semester.__
 - [Lecture 6: ER(5), Relational(5), SQL(5)](https://github.com/donald-f-ferguson/W4111-Intro-to-Databases-Base/blob/main/Lectures/Fall-2024/W4111-2024F-06-ER5-Relational5-SQL5/W4111-2024F-06-ER5-Relational5-SQL5-v1.pdf))
 - [Lecture 7: Module-II-NoSql](https://github.com/donald-f-ferguson/W4111-Intro-to-Databases-Base/blob/main/Lectures/Fall-2024/W4111-2024F-07-ModuleII-NoSql/W4111-02024F-07-Module-II-NoSql.pdf))
 - [W4111-02024F-8-Module-II(3)-NoSql(3).pdf](https://github.com/donald-f-ferguson/W4111-Intro-to-Databases-Base/blob/main/Lectures/Fall-2024/W4111-2024F-08-Module-II(2)-NoSQL(2)/W4111-02024F-08-Module-II(2)-NoSql(2).pdf)
-- [W4111-02024F-9-Module-II(3)-NoSql(3).pdf](https://github.com/donald-f-ferguson/W4111-Intro-to-Databases-Base/blob/main/Lectures/Fall-2024/W4111-2024F-09-Module-II(3)-NoSQL(3)/W4111-02024F-09-Module-II(3)-NoSql(3).pdf))
+- [W4111-02024F-9-Module-II(3)-NoSql(3).pdf](https://github.com/donald-f-ferguson/W4111-Intro-to-Databases-Base/blob/main/Lectures/Fall-2024/W4111-2024F-09-Module-II(3)-NoSQL(3)/W4111-02024F-09-Module-II(3)-NoSql(3).pdf)
 
 ## Calendar
 
